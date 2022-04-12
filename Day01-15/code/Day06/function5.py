@@ -24,10 +24,7 @@ print(f1(c=2, b=3, a=1))
 
 # 可变参数
 def f2(*args):
-    sum = 0
-    for num in args:
-        sum += num
-    return sum
+    return sum(args)
 
 
 print(f2(1, 2, 3))
@@ -38,9 +35,9 @@ print(f2())
 # 关键字参数
 def f3(**kw):
     if 'name' in kw:
-        print('欢迎你%s!' % kw['name'])
+        print(f"欢迎你{kw['name']}!")
     elif 'tel' in kw:
-        print('你的联系电话是: %s!' % kw['tel'])
+        print(f"你的联系电话是: {kw['tel']}!")
     else:
         print('没找到你的个人信息!')
 
