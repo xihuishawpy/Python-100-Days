@@ -3,7 +3,7 @@ from random import randint, sample
 
 def generate():
     """生成一组随机号码"""
-    red_balls = [x for x in range(1, 34)]
+    red_balls = list(range(1, 34))
     selected_balls = sample(red_balls, 6)
     selected_balls.sort()
     selected_balls.append(randint(1, 16))
